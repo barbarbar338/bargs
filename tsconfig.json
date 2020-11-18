@@ -1,10 +1,17 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+		"module": "commonjs",
+		"declaration": true,
+		"removeComments": true,
+		"allowSyntheticDefaultImports": true,
+		"target": "es2017",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"incremental": true,
+        "typeRoots": [
+            "node_modules/@types",
+            "@types"
+        ]
     }
 }

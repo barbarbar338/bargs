@@ -1,17 +1,4 @@
-export type OptionDefinitions = {
-    name: string;
-    type: (t: unknown) => unknown;
-    aliases?: string[];
-    default?: boolean;
-}[];
-
-export interface Result {
-    _unknown: {
-        _?: string;
-        [key: string]: unknown;
-    };
-    [key: string]: unknown;
-}
+import { OptionDefinitions, Result } from "bargs";
 
 export function bargs(
     options: OptionDefinitions,
