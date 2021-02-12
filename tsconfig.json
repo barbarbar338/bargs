@@ -5,13 +5,14 @@
 		"removeComments": true,
 		"allowSyntheticDefaultImports": true,
 		"target": "es2017",
-		"sourceMap": true,
 		"outDir": "./dist",
 		"baseUrl": "./",
 		"incremental": true,
-        "typeRoots": [
-            "node_modules/@types",
-            "@types"
-        ]
-    }
+		"strict": true
+    },
+	"exclude": [
+		"node_modules",
+		"dist",
+		"test.ts"
+	]
 }
