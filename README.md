@@ -1,34 +1,44 @@
 # 🦄 Bargs
-- A simple argument parsing system ✨
+
+-   A simple argument parsing system with 0 dependencies ✨
 
 # 📥 Installation
+
 Using yarn:
+
 ```
 $ yarn add bargs
 ```
+
 Using npm:
+
 ```
 $ npm install bargs
 ```
 
 # 🔧 Usage
+
 ```js
 bargs(OptionDefinitions, argv?);
 ```
-- `OptionDefinitions`: Where options are defined to be used when separating arguments. Structure:
+
+-   `OptionDefinitions`: Where options are defined to be used when separating arguments. Structure:
+
 ```js
 [
-    { 
-        name: "OptionName", 
+    {
+        name: "OptionName",
         type: String, //OptionType (function)
         aliases?: [ "option", "aliases", "t" ],
         default?: false
     }
 ]
 ```
-- `argv?`: Arguments to parse. Default is `process.argv.slice(2)`.
+
+-   `argv?`: Arguments to parse. Default is `process.argv.slice(2)`.
 
 # 🛠️ Example
+
 ```js
 /* es6 */
 import { bargs } from "bargs";
@@ -37,12 +47,12 @@ import { bargs } from "bargs";
 const { bargs } = require("bargs");
 
 const definitions = [
-    { name: "help", type: Boolean, aliases: [ "h", "halp", "yardim", "y" ] },
-    { name: "message", type: String, default: true },
-    { name: "page", type: Number }
-]
+	{ name: "help", type: Boolean, aliases: ["h", "halp", "yardim", "y"] },
+	{ name: "message", type: String, default: true },
+	{ name: "page", type: Number },
+];
 
-const argv = [ "This", "is", "message", "-h", "--page", "2", "--foo", "bar" ];
+const argv = ["This", "is", "message", "-h", "--page", "2", "--foo", "bar"];
 
 bargs(definitions, argv);
 /*
@@ -58,4 +68,5 @@ bargs(definitions, argv);
 ```
 
 # 🔗 Contributing / Issues / Ideas
+
 Feel free to use GitHub's features ✨

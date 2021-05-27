@@ -1,5 +1,5 @@
 {
-    "compilerOptions": {
+	"compilerOptions": {
 		"module": "commonjs",
 		"declaration": true,
 		"removeComments": true,
@@ -8,11 +8,8 @@
 		"outDir": "./dist",
 		"baseUrl": "./",
 		"incremental": true,
-		"strict": true
-    },
-	"exclude": [
-		"node_modules",
-		"dist",
-		"test.ts"
-	]
+		"strict": true,
+		"sourceMap": true
+	},
+	"exclude": ["node_modules", "dist", "test.ts"]
 }
