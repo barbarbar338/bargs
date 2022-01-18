@@ -14,7 +14,7 @@ it("Basic Parsing", () => {
 		"--command",
 		"push",
 		"--operator",
-		"-"
+		"-",
 	];
 	try {
 		const args = bargs([
@@ -64,7 +64,7 @@ it("Parsing With No Options", () => {
 		"--command",
 		"push",
 		"--operator",
-		"-"
+		"-",
 	];
 	try {
 		const args = bargs([]);
@@ -75,7 +75,7 @@ it("Parsing With No Options", () => {
 				h: true,
 				page: "12",
 				command: "push",
-				operator: "-"
+				operator: "-",
 			},
 		});
 	} finally {
@@ -100,7 +100,7 @@ it("Unexpected String", () => {
 		"is",
 		"message",
 		"--operator",
-		"-"
+		"-",
 	];
 	try {
 		const args = bargs([
@@ -115,7 +115,7 @@ it("Unexpected String", () => {
 		expect(args["_unknown"]).to.deep.equal({
 			_: "Hello, world!",
 			command: "push",
-			operator: "-"
+			operator: "-",
 		});
 	} finally {
 		process.argv = defaultProcessArgs;
